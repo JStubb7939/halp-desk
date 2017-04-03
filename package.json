@@ -8,7 +8,7 @@
     "url": "git+https://github.com/JStubb7939/halp-desk.git"
   },
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install && ./server/psql halpdesk < seed.sql",
+    "postinstall": "./node_modules/bower/bin/bower install",
     "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
