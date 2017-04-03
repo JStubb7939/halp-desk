@@ -8,7 +8,7 @@
     "url": "git+https://github.com/JStubb7939/halp-desk.git"
   },
   "scripts": {
-    "postinstall": "bower install",
+    "postinstall": "bower cache clean && bower install",
     "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
