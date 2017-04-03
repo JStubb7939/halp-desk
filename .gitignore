@@ -11,6 +11,7 @@ pids
 .env
 .git
 .DS_Store
+.pem
 
 # Compiled directories
 build/

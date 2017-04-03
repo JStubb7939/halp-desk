@@ -1,5 +1,3 @@
-// var db = require('./db_config.js');
-// var http = require('http');
 const express = require('express');
 const router = express.Router();
 const pg = require('pg');
