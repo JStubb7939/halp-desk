@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "A help desk application for peer-to-peer support",
   "main": "client/app.js",
+  "repository": {
+  "type": "git",
+    "url": "git+https://github.com/JStubb7939/halp-desk.git"
+  },
   "scripts": {
+    "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jordan Stubblefield",
