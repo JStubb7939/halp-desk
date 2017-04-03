@@ -1,0 +1,45 @@
+.content {
+  padding: 2rem;
+}
+
+.ticket {
+  padding: 5px;
+  margin: 15px 0;
+  background: #fff;
+  font-size: 1em;
+  line-height: 1.3em;
+  border-radius: 10px;
+  box-shadow: 0 0 0 4px #fff, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  font-weight: normal;
+}
+
+.ticket > .row {
+  padding: 5px;
+}
+
+.ticket-section-header {
+  margin-bottom: 40px;
+}
+
+.ticket-subject {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.ticket-open {
+  background: rgb(255, 152, 0);
+  color: #fff;
+  padding: 5px 15px;
+}
+
+.ticket-closed {
+  background: rgb(0, 118, 255);
+  color: #fff;
+  padding: 5px 15px;
+}
+
+.fa {
+  cursor: pointer;
+  font-size: 1.3em;
+  margin: -10px 0 0 0;
+}

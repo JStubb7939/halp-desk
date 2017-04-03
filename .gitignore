@@ -1,0 +1,23 @@
+# Logs
+logs
+*.logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.env
+.env
+.git
+.DS_Store
+
+# Compiled directories
+build/
+dist/
+lib/
+
+# Dependency directories
+node_modules/
+
+npm-debug.log
