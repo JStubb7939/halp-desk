@@ -45,27 +45,30 @@
       <div class='tickets'>
         <div class='ticket' ng-repeat="ticket in data.tickets">
           <div class="row ticket-heading">
-            <div class="col-md-4"><span class="ticket-number">Ticket #: {{ ticket.id }}</span></div>
+            <div class="col-md-4">Ticket# {{ ticket.id }}</div>
             <div class="col-md-8"><span class="ticket-subject">{{ ticket.subject }}</span></div>
           </div> <!-- /row -heading- -->
           <div class="row ticket-body">
-            <div class="col-md-4 {{ ticket.archive ? 'ticket-closed' : 'ticket-open' }}"><span class="ticket-status">{{ ticket.archive ? 'Closed' : 'Open' }}</span></div>
-            <div class="col-md-8"><span class="ticket-issue">{{ ticket.issue }}</span></div>
+            <div class="col-md-4 {{ ticket.archive ? 'ticket-closed' : 'ticket-open' }}">{{ ticket.archive ? 'Closed' : 'Open' }}</div>
+            <div class="col-md-8">{{ ticket.issue }}</div>
           </div> <!-- /row -body- -->
           <div class="row ticket-footer">
             <div class="col-md-1"><br /><span class="ticket-delete fa fa-trash-o" ng-click="deleteTicket(ticket)"></span></div>
             <div class="col-md-1"><br /><span class="ticket-resolve fa fa-check" ng-click="resolveTicket()"></span></div>
             <div class="col-md-2"><br /><span class="ticket-archive fa fa-archive" ng-click="archiveTicket(ticket)"></span></div>
-            <div class="col-md-2">
-              <div><span class="ticket-footer-sub">Submitted by</span></div>
-              <div><span class="ticket-author">{{ ticket.author }}</span></div>
+            <div class="col">
+              Submitted by
+              <br />
+              {{ ticket.author }}
             </div>
-            <div class="col-md-3">
-              <div><span class="ticket-footer-sub">Created at</span></div>
-              <div><span class="ticket-created">{{ ticket.createdAt }}</span></div>
+            <div class="col">
+              Created at
+              <br  />
+              <time am-time-ago="ticket.createdAt"></time>
             </div>
-            <div class="col-md-3">
-              <div><span class="ticket-footer-sub">Chat link</span></div>
+            <div class="col">
+              Chat link
+              <br  />
               <div class="chat-link"><a href="{{ ticket.chatUrl }}" target="_blank"><span class="ticket-link">{{ ticket.chaturl }}</span></a></div>
             </div>
           </div> <!-- /row -footer- -->

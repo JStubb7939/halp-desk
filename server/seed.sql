@@ -6,6 +6,7 @@ CREATE TABLE tickets(
   subject VARCHAR(50),
   issue VARCHAR(255),
   chatUrl VARCHAR(255),
+  createdAt VARCHAR(100),
   archive BOOLEAN,
   status BOOLEAN
 );

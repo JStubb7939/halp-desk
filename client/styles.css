@@ -7,7 +7,7 @@ body {
   max-width: 1440px;
 }
 
-.ticket {
+.ticket, form {
   padding: .5rem;
   margin: 1rem 0;
   background: #fff;
@@ -16,6 +16,15 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 0 4px #fff, 2px 2px 6px 3px rgba(10, 10, 0, 0.5);
   font-weight: normal;
+}
+
+form {
+  border-radius: 0;
+  box-shadow: 0 0 0 4px #fff, 2px 3px 6px 1px rgba(10, 10, 0, 0.5);
+}
+
+form .btn {
+  border-radius: 0;
 }
 
 .ticket > .row {
@@ -31,17 +40,18 @@ h2 {
   font-size: 1.5em;
 }
 
-.ticket-open {
-  background: rgb(255, 152, 0);
+.ticket-open, .ticket-closed {
   color: #fff;
   padding: 5px 15px;
   height: 2rem;
 }
 
+.ticket-open {
+  background: rgb(255, 152, 0);
+}
+
 .ticket-closed {
   background: rgb(0, 118, 255);
-  color: #fff;
-  padding: 5px 15px;
 }
 
 .chat-link {
@@ -54,12 +64,6 @@ h2 {
   margin: -10px 0 0 0;
 }
 
-form {
-  padding: 1rem;
-  margin: 1rem 0;
-  background: #fff;
-  font-size: 1em;
-  line-height: 1.3em;
-  box-shadow: 0 0 0 4px #fff, 2px 3px 6px 1px rgba(10, 10, 0, 0.5);
-  font-weight: normal;
+textarea {
+  min-height: 7rem;
 }

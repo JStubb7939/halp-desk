@@ -2,7 +2,6 @@ angular.module('halp-desk.open', [])
 
 .controller('OpenController', function ($scope, $location, $route, Tickets) {
   $scope.ticket = {};
-
   $scope.submitTicket = function(ticket) {
     $scope.loading = true;
     Tickets.submitTicket({
@@ -11,6 +10,7 @@ angular.module('halp-desk.open', [])
       issue: ticket.issue,
       chatUrl: ticket.chatUrl,
       archive: false,
+      createdAt: ,
       status: true
     })
       .then(function() {
