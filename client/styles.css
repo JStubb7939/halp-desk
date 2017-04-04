@@ -1,5 +1,10 @@
+body {
+  background-color: #F1F1F1;
+}
+
 .content {
   padding: 2rem;
+  max-width: 1440px;
 }
 
 .ticket {
