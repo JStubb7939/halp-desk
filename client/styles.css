@@ -8,13 +8,13 @@ body {
 }
 
 .ticket {
-  padding: 5px;
-  margin: 15px 0;
+  padding: .5rem;
+  margin: 1rem 0;
   background: #fff;
   font-size: 1em;
   line-height: 1.3em;
   border-radius: 10px;
-  box-shadow: 0 0 0 4px #fff, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  box-shadow: 0 0 0 4px #fff, 2px 2px 6px 3px rgba(10, 10, 0, 0.5);
   font-weight: normal;
 }
 
@@ -22,8 +22,8 @@ body {
   padding: 5px;
 }
 
-.ticket-section-header {
-  margin-bottom: 40px;
+h2 {
+  margin-bottom: 3rem;
 }
 
 .ticket-subject {
@@ -35,6 +35,7 @@ body {
   background: rgb(255, 152, 0);
   color: #fff;
   padding: 5px 15px;
+  height: 2rem;
 }
 
 .ticket-closed {
@@ -43,8 +44,22 @@ body {
   padding: 5px 15px;
 }
 
+.chat-link {
+  overflow-x: hidden;
+}
+
 .fa {
   cursor: pointer;
   font-size: 1.3em;
   margin: -10px 0 0 0;
+}
+
+form {
+  padding: 1rem;
+  margin: 1rem 0;
+  background: #fff;
+  font-size: 1em;
+  line-height: 1.3em;
+  box-shadow: 0 0 0 4px #fff, 2px 3px 6px 1px rgba(10, 10, 0, 0.5);
+  font-weight: normal;
 }

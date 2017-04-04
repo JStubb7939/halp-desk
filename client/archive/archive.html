@@ -26,7 +26,7 @@
             <div class="col-md-8"><span class="ticket-subject">{{ ticket.subject }}</span></div>
           </div> <!-- /row -heading- -->
           <div class="row ticket-body">
-            <div class="col-md-4 {{ ticket.status ? 'ticket-open' : 'ticket-closed' }}"><span class="ticket-status">{{ ticket.status ? 'Open' : 'Closed' }}</span></div>
+            <div class="col-md-4 {{ ticket.archive ? 'ticket-closed' : 'ticket-open' }}"><span class="ticket-status">{{ ticket.archive ? 'Closed' : 'Open' }}</span></div>
             <div class="col-md-8"><span class="ticket-issue">{{ ticket.issue }}</span></div>
           </div> <!-- /row -body- -->
           <div class="row ticket-footer">
