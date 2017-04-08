@@ -1,7 +1,20 @@
 angular.module('halp-desk.open', [])
 
 .controller('OpenController', function ($scope, $location, $route, Tickets) {
-  $scope.ticket = {};
+  $scope.data = {};
+
+  $scope.getTickets = function() {
+    Tickets.getOpen()
+      .then(function(openTickets) {
+        $scope.data.tickets = openTickets;
+      })
+      .catch(function(error) {
+        console.error(error);
+      });
+  };
+
+  $scope.getTickets();
+
   $scope.submitTicket = function(ticket) {
     $scope.loading = true;
     Tickets.submitTicket({
@@ -42,20 +55,5 @@ angular.module('halp-desk.open', [])
       });
   };
 
-  $scope.data = {};
-
-  $scope.getTickets = function() {
-    Tickets.getOpen()
-      .then(function(openTickets) {
-        console.dir(openTickets[0]);
-        $scope.data.tickets = openTickets;
-      })
-      .catch(function(error) {
-        console.error(error);
-      });
-  };
-
-
-  $scope.getTickets();
   $scope.name = 'OpenController';
 });

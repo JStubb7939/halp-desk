@@ -14,12 +14,12 @@ app.use((err, req, res, next) => {
   console.log(err);
   res.status(500).send('Server Error');
 });
+app.use('/api', routes);
 
 router.get('/', (req, res, next) => {
   res.sendFile(path.join(__dirname, '..', 'client', 'index.html'));
 });
 
-app.use('/api', routes);
 
 app.listen(port, (err) => {
   err

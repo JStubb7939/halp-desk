@@ -1,5 +1,5 @@
-var router = require('express').Router();
-var requestHandler = require('./request-handler.js');
+const router = require('express').Router();
+const requestHandler = require('./request-handler.js');
 
 router.get('/open', requestHandler.getOpenTickets);
 router.get('/archive', requestHandler.getArchivedTickets);

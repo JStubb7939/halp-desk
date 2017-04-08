@@ -39,7 +39,6 @@ angular.module('halp-desk.factories', [])
   };
 
   var deleteTicket = function(ticket) {
-    console.dir(ticket);
     return $http({
       method: 'POST',
       url: '/api/delete',

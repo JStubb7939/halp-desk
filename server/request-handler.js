@@ -75,7 +75,7 @@ exports.updateTicket = (req, res) => {
   console.log(req.body);
   const results = [];
   const id = req.body.id;
-  const archive = !req.body.archive;
+  const ticket = Object.assign({}, req.body, { archive: !req.body.archive })
 
   pg.connect(connection, (err, client, done) => {
     if (err) {
@@ -83,7 +83,7 @@ exports.updateTicket = (req, res) => {
       console.log(err);
       return res.status(500).json({success: false, data: err});
     }
-    const query = client.query('UPDATE tickets SET archive = $1 WHERE id = $2', [archive, id]);
+    const query = client.query('UPDATE tickets SET archive = $1 WHERE id = $2', [ticket.archive, id]);
     query.on('row', (row) => {
       results.push(row);
     })
@@ -95,7 +95,6 @@ exports.updateTicket = (req, res) => {
 };
 
 exports.deleteTicket = (req, res) => {
-  console.log(req.body);
   const results = [];
 
   pg.connect(connection, (err, client, done) => {
