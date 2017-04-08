@@ -10,7 +10,6 @@ angular.module('halp-desk.open', [])
       issue: ticket.issue,
       chatUrl: ticket.chatUrl,
       archive: false,
-      createdAt: ,
       status: true
     })
       .then(function() {
